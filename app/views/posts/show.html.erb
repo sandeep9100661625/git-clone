@@ -1,0 +1,7 @@
+<h2>showing post</h2>
+
+<p><strong>Headline: </strong><%= @post.heading %></p>
+<p><strong>Description: </strong><%= @post.description %></p>
+<%= link_to 'Show posts',posts_path%>
+<%= link_to 'create new post',new_post_path%>
+<%= link_to 'edit post', edit_post_path(@post.id)%>

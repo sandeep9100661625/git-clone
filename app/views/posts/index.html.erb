@@ -1,0 +1,21 @@
+<h1>Users</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Heading</th>
+            <th>Description</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @post.each do|i| %>
+        <tr>
+            <td><%= i.heading  %></td>
+            <td><%= i.description%></td>
+            <td><%= link_to 'show',post_path(i.id)%>
+        </tr>
+        <%end%>
+    </tbody>
+</table>
+
+<%= link_to 'create new post',new_post_path%>
